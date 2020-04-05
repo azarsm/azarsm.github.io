@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AR Weather</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+    <meta http-equiv="refresh" content="300">
+    <style>
+     .hl a {
+          display:none;
+     }
+    </style>
+</head>
+<body bgcolor="#000000">
+
+
+<table style="width: 100%">
+    <tr style="text-align:center"  >
+        <td style="width:5%"> &nbsp;</td> 
+        <td>
+            <p id="cDt" style="font-family: Arial, Helvetica, sans-serif;color:grey;text-align:left"></p>
+            <p id="cDay" class="h1" style="font-family: Arial, Helvetica, sans-serif;color:white;font-size: 15px"></p>
+            <div style="width: 100%;text-align:center">
+                
+                <iframe style="display: block;" src="https://cdnres.willyweather.com.au/widget/loadView.html?id=57038" width="1000px" height="920px" frameborder="0"  scrolling="no">
+                </iframe>
+                <a style="text-indent: -9999em;z-index: 1;margin: -20px 0 0 0;height: 20px;display: block;position: relative" href="https://www.willyweather.com.au/nsw/greater-western-sydney/schofields.html" rel="nofollow">schofields's weather</a>
+            </div> 
+        </td>
+        <td  style="width:20%;vertical-align:top ;padding: 15px;">&nbsp;
+                <p>&nbsp;</p>
+                <div style="width: 210px;"><iframe style="display: block;" src="https://cdnres.willyweather.com.au/widget/loadView.html?id=57040" width="210" height="228" frameborder="0" scrolling="no"></iframe><a style="display: block;z-index: 1;position: relative;margin: -20px 0 0 0;text-indent: -9999em;height: 20px" href="https://www.willyweather.com.au/nsw/greater-western-sydney/schofields.html" rel="nofollow">https://www.willyweather.com.au/nsw/greater-western-sydney/schofields.html</a>
+                
+                </div>
+                <br><br>
+                <div class="hl" style="font-family: Arial, Helvetica, sans-serif;color:white;background: linear-gradient(to top, #000000 0%, #666699 100%);padding: 15px;">
+                        <script src="https://www.biblegateway.com/votd/votd.write.callback.js"></script>
+                        
+                         <script src="https://www.biblegateway.com/votd/get/?format=json&version=NIV&callback=BG.votdWriteCallback"></script>
+                         <!-- alternative for no javascript -->
+                         <div style="display:none"></div>
+                         <noscript>
+                         <iframe framespacing="0" frameborder="no" src="https://www.biblegateway.com/votd/get/?format=html&version=NIV">View Verse of the Day</iframe> 
+                         </noscript>
+                        </div>
+                </div>
+        </td>
+        <td style="width:5%">&nbsp;</td>
+    </tr>
+   
+</table>
+
+
+
+ 
+    
+
+
+<script>
+var d = new Date();
+
+document.getElementById("cDt").innerHTML = d;
+document.getElementById("cDay").innerHTML = d.getDate();
+</script>
+
+
+</body>
+</html>
+

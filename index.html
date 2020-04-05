@@ -12,6 +12,8 @@
      .hl a {
           display:none;
      }
+     
+
     </style>
 </head>
 <body bgcolor="#000000">
@@ -22,7 +24,9 @@
         <td style="width:5%"> &nbsp;</td> 
         <td>
             <p id="cDt" style="font-family: Arial, Helvetica, sans-serif;color:grey;text-align:left"></p>
-            <p id="cDay" class="h1" style="font-family: Arial, Helvetica, sans-serif;color:white;font-size: 15px"></p>
+            <p id="cDay"   style="font-family: Arial, Helvetica, sans-serif;color:rgb(99, 140, 216);font-size:3em;">Today:</p>
+            <p id="cDay2"   style="font-family: Arial, Helvetica, sans-serif;color:white;font-size: 50px;display:none">Today 2:</p>
+
             <div style="width: 100%;text-align:center">
                 
                 <iframe style="display: block;" src="https://cdnres.willyweather.com.au/widget/loadView.html?id=57038" width="1000px" height="920px" frameborder="0"  scrolling="no">
@@ -36,7 +40,7 @@
                 
                 </div>
                 <br><br>
-                <div class="hl" style="font-family: Arial, Helvetica, sans-serif;color:white;background: linear-gradient(to top, #000000 0%, #666699 100%);padding: 15px;">
+                <div class="hl" style="font-family: Arial, Helvetica, sans-serif;color:white;background: linear-gradient(to top, #000000 0%, #4a87b9 100%);padding: 15px;">
                         <script src="https://www.biblegateway.com/votd/votd.write.callback.js"></script>
                         
                          <script src="https://www.biblegateway.com/votd/get/?format=json&version=NIV&callback=BG.votdWriteCallback"></script>
@@ -60,10 +64,16 @@
 
 
 <script>
+
+function eng_suffix(dt)
+  {
+    return dt.getDate()+(dt.getDate() % 10 == 1 && dt.getDate() != 11 ? 'st' : (dt.getDate() % 10 == 2 && dt.getDate() != 12 ? 'nd' : (dt.getDate() % 10 == 3 && dt.getDate() != 13 ? 'rd' : 'th'))); 
+  };
+
 var d = new Date();
 
 document.getElementById("cDt").innerHTML = d;
-document.getElementById("cDay").innerHTML = d.getDate() +" th";
+document.getElementById("cDay").innerHTML = d.toLocaleString('default', { month: 'long' }) + " "+ eng_suffix(d);
 </script>
 
 

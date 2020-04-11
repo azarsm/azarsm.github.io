@@ -19,8 +19,8 @@
       }
     </style>
 </head>
-<body bgcolor="#000000">
-<div class="container-fluid" style="bg-dark">
+<body bgcolor="#000000" class="bg-dark">
+<div class="container-fluid bg-dark" >
     <div class="row">
         <p id="cDt" style="font-family: Arial, Helvetica, sans-serif;color:grey;text-align:left"></p>
         <p id="cDay" style="font-family: Arial, Helvetica, sans-serif;color:rgb(99, 140, 216);font-size:3em;">Today:</p>
@@ -31,14 +31,35 @@
             <div style="width: 100%;text-align:center">
 
                 <iframe style="display: block;" src="https://cdnres.willyweather.com.au/widget/loadView.html?id=57038"
-                    width="100%" height="920px" frameborder="0" scrolling="no">
+                    width="100%" height="600px" frameborder="0" scrolling="no">
                 </iframe>
                 <a style="text-indent: -9999em;z-index: 1;margin: -20px 0 0 0;height: 20px;display: block;position: relative"
                     href="https://www.willyweather.com.au/nsw/greater-western-sydney/schofields.html"
                     rel="nofollow">schofields's weather</a>
             </div>
+
+            <div class="row">
+                <div class="col-lg-3">
+                    <iframe style="display: block;" src="https://cdnres.willyweather.com.au/widget/loadView.html?id=57040"
+                        width="210" height="228" frameborder="0" scrolling="no"></iframe>
+                </div>
+        
+                <div class="hl col-lg-3"
+                    style="font-family: Arial, Helvetica, sans-serif;color:white;background: linear-gradient(to top, #000000 0%, #4a87b9 100%);padding: 15px;text-align:center">
+                    <script src="https://www.biblegateway.com/votd/votd.write.callback.js"></script>
+        
+                    <script
+                        src="https://www.biblegateway.com/votd/get/?format=json&version=NIV&callback=BG.votdWriteCallback"></script>
+                    <!-- alternative for no javascript -->
+                    <div style="display:none"></div>
+                    <noscript>
+                        <iframe framespacing="0" frameborder="no"
+                            src="https://www.biblegateway.com/votd/get/?format=html&version=NIV">View Verse of the Day</iframe>
+                    </noscript>
+                </div>
+            </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6" style="">
             <div style="font-family: Arial, Helvetica, sans-serif;vertical-align:top">
                 <!-- iframe style="display: block" width="500px" height="400px" -->
                 <script src="https://apps.elfsight.com/p/platform.js" defer></script>
@@ -48,52 +69,12 @@
         </div>
     </div>
 
-</div>
-<table style="width: 100%">
-    <tr style="text-align:center"  >
-        <td style="width:5%"> &nbsp;</td> 
-        <td>
-            <p id="cDt" style="font-family: Arial, Helvetica, sans-serif;color:grey;text-align:left"></p>
-            <p id="cDay"   style="font-family: Arial, Helvetica, sans-serif;color:rgb(99, 140, 216);font-size:3em;">Today:</p>
-            <p id="cDay2"   style="font-family: Arial, Helvetica, sans-serif;color:white;font-size: 50px;display:none">Today 2:</p>
 
-            <div style="width: 100%;text-align:center">
-                
-                <iframe style="display: block;" src="https://cdnres.willyweather.com.au/widget/loadView.html?id=57038" width="1000px" height="920px" frameborder="0"  scrolling="no">
-                </iframe>
-                <a style="text-indent: -9999em;z-index: 1;margin: -20px 0 0 0;height: 20px;display: block;position: relative" href="https://www.willyweather.com.au/nsw/greater-western-sydney/schofields.html" rel="nofollow">schofields's weather</a>
-            </div> 
-        </td>
-        <td>
-            <div style="font-family: Arial, Helvetica, sans-serif;vertical-align:top">
-                <!-- iframe style="display: block" width="500px" height="400px" -->
-                <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-                <div class="elfsight-app-e1cbd66a-6c21-4be3-9621-2196c4ffa25d"></div>
-                <!-- /iframe -->
-                </div>    
-        </td>
-        <td  style="width:20%;vertical-align:top ;padding: 15px;">&nbsp;
-                <p>&nbsp;</p>
-                <div style="width: 210px;"><iframe style="display: block;" src="https://cdnres.willyweather.com.au/widget/loadView.html?id=57040" width="210" height="228" frameborder="0" scrolling="no"></iframe><a style="display: block;z-index: 1;position: relative;margin: -20px 0 0 0;text-indent: -9999em;height: 20px" href="https://www.willyweather.com.au/nsw/greater-western-sydney/schofields.html" rel="nofollow">https://www.willyweather.com.au/nsw/greater-western-sydney/schofields.html</a>
-                
-                </div>
-                <br><br>
-                <div class="hl" style="font-family: Arial, Helvetica, sans-serif;color:white;background: linear-gradient(to top, #000000 0%, #4a87b9 100%);padding: 15px;">
-                        <script src="https://www.biblegateway.com/votd/votd.write.callback.js"></script>
-                        
-                         <script src="https://www.biblegateway.com/votd/get/?format=json&version=NIV&callback=BG.votdWriteCallback"></script>
-                         <!-- alternative for no javascript -->
-                         <div style="display:none"></div>
-                         <noscript>
-                         <iframe framespacing="0" frameborder="no" src="https://www.biblegateway.com/votd/get/?format=html&version=NIV">View Verse of the Day</iframe> 
-                         </noscript>
-                        </div>
-                </div>
-        </td>
-        <td style="width:5%">&nbsp;</td>
-    </tr>
-   
-</table>
+</div>
+</div>
+
+
+
 
 <div class="cf"> 
     <p style="font-family: Arial, Helvetica, sans-serif;color:grey;text-align:left"> font face</p>

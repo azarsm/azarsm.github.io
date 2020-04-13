@@ -78,8 +78,8 @@
                 <!-- /iframe -->
             </div>
 
-            <div class="cf">
-                <span style="font-family: Arial, Helvetica, sans-serif;color:grey;text-align:left">
+            <div class="cf text-primary">
+                <span style="font-family: Arial, Helvetica, sans-serif;text-align:left">
                     <p id="sd"></p>
 
 
@@ -114,10 +114,13 @@ function rndV  ()
 
 };
 
-var cv = sList(0);
 
+lu= Math.floor(Math.random() * 83); 
+var cv = sList(lu);
 
 console.log("slist()", cv  );
+
+
 document.getElementById("sd").innerHTML = "<b>"+cv[0].r +"</b><br> "+ cv[0].v + " - " + cv[0].vr  ;
 
 </script>

@@ -117,11 +117,22 @@ function rndV  ()
 
 lu= Math.floor(Math.random() * 83); 
 var cv = sList(lu);
+var preS = Math.abs(lu-1);
+var postS = Math.abs(lu+1);
+if (postS > 83 ) {
+postS-83;
+};
 
-console.log("slist()", cv  );
+//console.log("slist()", cv  );
+cv = sList(preS);
+var Cs =  '<span class="text-secondary">['+ preS + "] <b>"+cv[0].r +"</b><br>"+ cv[0].v + " - " + cv[0].vr + "<br></span>" ;
 
+cv = sList(lu);
+Cs = Cs + '<span class="text-success"><br>['+lu+"] <b>"+cv[0].r +"</b><br> "+ cv[0].v + " - " + cv[0].vr +"</span>"  + "<br>"  ;
 
-document.getElementById("sd").innerHTML = "<b>"+cv[0].r +"</b><br> "+ cv[0].v + " - " + cv[0].vr  ;
+cv = sList(postS);
+Cs = Cs + '<span class="text-secondary"><b><br>['+  postS+  "] " + cv[0].r +"</b><br> "+ cv[0].v + " - " + cv[0].vr  + "</span><br>"  ;
+document.getElementById("sd").innerHTML = Cs ;
 
 </script>
 

@@ -27,7 +27,7 @@
  
     </div>
     <div class="row">
-        <div class="col-lg-6 p-5">
+        <div class="col-lg-6 p-5 bg-success">
             <div style="width: 100%;text-align:center">
 
                 <iframe style="display: block;" src="https://cdnres.willyweather.com.au/widget/loadView.html?id=57038"
@@ -78,7 +78,7 @@
                 <!-- /iframe -->
             </div>
 
-            <div class="cf text-white bg-dark p-4">
+            <div class="cf text-white bg-warning p-4">
                 <span style="font-family: Arial, Helvetica, sans-serif;text-align:left">
                     <p id="sd"></p>
 
@@ -125,7 +125,7 @@ postS-83;
 
 //console.log("slist()", cv  );
 cv = sList(preS);
-var Cs =  '<h5><span class="text-secondary">['+ preS + "] <b>"+cv[0].r +"</b><br>"+ cv[0].v + " - " + cv[0].vr + "<br></span>" ;
+var Cs =  '<br><h5><span class="text-secondary">['+ preS + "] <b>"+cv[0].r +"</b><br>"+ cv[0].v + " - " + cv[0].vr + "<br></span>" ;
 
 cv = sList(lu);
 Cs = Cs + '<h5><span class="text-success"><br>['+lu+"] <b>"+cv[0].r +"</b><br> "+ cv[0].v + " - " + cv[0].vr +"</span>"  + "<br>"  ;

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AR Weather V1.003</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="main.js"></script>
+    <meta http-equiv="refresh" content="7200">
+    <style>
+     .hl a {
+          display:none;
+     }
+     
+     .resource-content {
+                     font-family: Arial, Helvetica, sans-serif !important;
+      }
+    </style>
+</head>
+<body bgcolor="#000000" class="bg-dark">
+<div class="container bg-dark" >
+    <div class="row">
+        <p id="cDt" style="font-family: Arial, Helvetica, sans-serif;color:grey;text-align:left"></p>
+        <p id="cDay" style="font-family: Arial, Helvetica, sans-serif;color:rgb(99, 140, 216);font-size:3em;">Today:</p>
+ 
+    </div>
+    <div class="row">
+   
+        <div class="col-lg-12" style="">
+   
+            <div class="cf text-white bg-dark p-4">
+                <span style="font-family: Arial, Helvetica, sans-serif;text-align:left">
+                    <p id="sd"></p>
+
+
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+</div>
+
+
+
+
+
+
+<script>
+
+function eng_suffix(dt)
+  {
+    return dt.getDate()+(dt.getDate() % 10 == 1 && dt.getDate() != 11 ? 'st' : (dt.getDate() % 10 == 2 && dt.getDate() != 12 ? 'nd' : (dt.getDate() % 10 == 3 && dt.getDate() != 13 ? 'rd' : 'th'))); 
+  };
+
+var d = new Date();
+
+document.getElementById("cDt").innerHTML = d;
+document.getElementById("cDay").innerHTML = d.toLocaleString('default', { month: 'long' }) + " "+ eng_suffix(d);
+
+document.getElementById("sd").innerHTML = "" ;
+var text ="";
+
+for (i = 0; i <= 83; i++) {
+  var cv = sList(i);
+  text += " <i>[" + i + "]</i><br> <b>"+cv[0].r +"</b><br> "+ cv[0].v + " - " + cv[0].vr + "<br><br>";
+};
+
+document.getElementById("sd").innerHTML = text ;
+
+
+</script>
+
+
+</body>
+</html>
+

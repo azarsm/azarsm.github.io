@@ -280,6 +280,13 @@ TODO:
     Clean up structure
 */
 
+/*
+TODO:
+    Limit number input
+    Disallow . from being entered multiple times
+    Clean up structure 
+*/
+
 (function() {
   "use strict";
 
@@ -346,7 +353,11 @@ TODO:
         break;
 
       case "divided by":
+        if (theNum == 0) {
+          resultNum = "Err"
+        } else {
         resultNum = oldNum / theNum;
+        }
         break;
 
         // If equal is pressed without an operator, keep number and continue
@@ -355,6 +366,7 @@ TODO:
     }
 
     // If NaN or Infinity returned
+    /*
     if (!isFinite(resultNum)) {
       if (isNaN(resultNum)) { // If result is not a number; set off by, eg, double-clicking operators
         resultNum = "You broke it!";
@@ -364,9 +376,13 @@ TODO:
         el('#reset').classList.add("show"); // And show reset button
       }
     }
+    */
 
     // Display result, finally!
     viewer.innerHTML = resultNum;
+    if (resultNum == "Err") {
+      resultNum = 0;
+    };
     equals.setAttribute("data-result", resultNum);
 
     // Now reset oldNum & keep result
@@ -406,8 +422,7 @@ TODO:
     window.location = window.location;
   };
 
-}());   
-
+}());
 
  
 //

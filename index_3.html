@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
     <style>
+
+
         html {
             background: #100a1c;
             background-image:
@@ -69,7 +74,7 @@
             height: 3em;
           }
           
-          button {
+          buttonX {
             border: 0;
             background: rgba(42,50,113, .28);
             color: #6cacc5;
@@ -235,49 +240,120 @@
           }
 
 
+
+
     </style>  
     </head>
 <body>
 
-    <h1>Calculator  B </h1>
-    <p class="warning"></p>
-    
-    <div id="calculator" class="calculator">
-    
-      <button id="clear" class="clear">C</button>
-    
-      <div id="viewer" class="viewer">0</div>
-    
-      <button class="num" data-num="7">7</button>
-      <button class="num" data-num="8">8</button>
-      <button class="num" data-num="9">9</button>
-      <button data-ops="plus" class="ops">+</button>
-    
-      <button class="num" data-num="4">4</button>
-      <button class="num" data-num="5">5</button>
-      <button class="num" data-num="6">6</button>
-      <button data-ops="minus" class="ops">-</button>
-    
-      <button class="num" data-num="1">1</button>
-      <button class="num" data-num="2">2</button>
-      <button class="num" data-num="3">3</button>
-      <button data-ops="times" class="ops">*</button>
-    
-      <button class="num" data-num="0">0</button>
-      <button class="num" data-num=".">.</button>
-      <button id="equals" class="equals" data-result="">=</button>
-      <button data-ops="divided by" class="ops">/</button>
-    </div>
-    
-    <button id="reset" class="reset">Reset Universe?</button>
-
     <div class="container">
-        .
+        <div class="row">
+          <div class="col-sm">
+            .
+          </div>
+          <div class="col-sm">
+            <h1>Calculator</h1>
+           
+            
+            <div id="calculator" class="calculatorX">
+            <div id="viewer" class="viewer font-weight-bold  text-right">0</div>
+
+            <div class="container">
+                <div class="row">
+              
+ 
+                    <div class="col-sm text-right">
+
+                        <button id="clear" type="button" class="btn btn-warning">C</button>
+                    </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm  text-right">
+                    <button type="button" class="num btn btn-primary"  data-num="7">7</button>
+                    <button type="button" class="num btn btn-primary" data-num="8">8</button>
+                    <button type="button" class="num btn btn-primary" data-num="9">9</button>
+                    <button type="button"  data-ops="divided by" class="ops btn btn-warning">/</button>
+                    
+                    
+                  </div>
+                </div>
+
+                  <div class="row">
+                    <div class="col-sm  text-right">
+                        
+                        <button type="button"  class="num btn btn-primary" data-num="4">4</button>
+                        <button type="button"  class="num btn btn-primary" data-num="5">5</button>
+                        <button type="button"  class="num btn btn-primary" data-num="6">6</button>
+                        <button type="button"  data-ops="times" class="ops btn btn-warning">*</button>
+                        
+                        
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm  text-right">
+
+    
+                        <button type="button"  class="num btn btn-primary" data-num="1">1</button>
+                        <button type="button"  class="num btn btn-primary" data-num="2">2</button>
+                        <button type="button"  class="num btn btn-primary" data-num="3">3</button>
+                        <button type="button"  data-ops="minus" class="ops btn btn-warning">-</button>
+                        
+                        
+
+                        
+
+                    </div>
+                  </div> 
+                  <div class="row">
+                    <div class="col-sm  text-right">
+                        
+ 
+                        <button type="button"  class="num btn  btn-primary" data-num="0">0</button>
+                        <button type="button"  class="num btn  btn-primary" data-num=".">.</button>
+                       
+                        <button type="button"  id="equals" class="equals btn btn-warning" data-result="">=</button>
+                        <button data-ops="plus" class="ops btn btn-warning">+</button>
+                        
+                    </div>
+                  </div>                                 
+
+                
+              </div>
+            <div class="container">
+
+            </div>
+            </div>
+            
+            <button id="reset" class="reset">Reset Universe?</button>
+          
+        </div>
+
+          <div class="col-sm">
+            .
+          </div>
+        </div>
+      </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm">
+              .
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+              .
+            </div>
+        </div>       
     </div>
+
 
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:800|Poppins:700" rel="stylesheet">
 
+<div class="container-fluid">
 <div class="converter-wrapper">
   <h1>ENGINEERING <br>UNIT CONVERTER</h1>
 
@@ -312,7 +388,7 @@
     </form>
   </div> <!-- /converter-side-b -->
 </div><!-- /converter-wrapper -->
-
+</div>
 
 
 <script>
